@@ -17,6 +17,49 @@ Les outils sont :
 
 Lien officiel vers l'installation des outils de développement : https://kubernetes.io/docs/tasks/tools/
 
+## Docker
+
+```Shell
+sudo apt-get update && sudo apt-get upgrade
+sudo apt-get install curl docker.io
+``` 
+
+## Minikube
+
+```Shell
+curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 && chmod +x minikube
+
+sud```o mkdir -p /usr/local/bin/
+sudo install minikube /usr/local/bin/
+```
+
+## Kubectl
+
+```Shell
+snap install kubectl --classic
+```
+
+## Test
+
+```Shell
+minikube start
+kubectl get pods -A
+```
+
+Le resultat doit être proche de : 
+
+```Shell
+NAMESPACE     NAME                               READY   STATUS    RESTARTS   AGE
+kube-system   coredns-66bc5c9577-gr8wk           1/1     Running   0          41s
+kube-system   etcd-minikube                      1/1     Running   0          47s
+kube-system   kube-apiserver-minikube            1/1     Running   0          47s
+kube-system   kube-controller-manager-minikube   1/1     Running   0          47s
+kube-system   kube-proxy-77rd9                   1/1     Running   0          41s
+kube-system   kube-scheduler-minikube            1/1     Running   0          47s
+kube-system   storage-provisioner                1/1     Running   0          45s
+user@user-supervision-vm:~$ 
+```
+
 # Etape 1 - Les tutoriels Kubernetes
 
 ## Les bases via la documentation de Kubernetes
@@ -96,4 +139,6 @@ L'objectif est de déployer un système de supervision basé sur plusieurs outil
 
 [TP Monter une stack de supervision from scratch](supervision/1.supervision_manifest.md)
 
+
+- 
 
