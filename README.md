@@ -135,6 +135,10 @@ L'objectif est de déployer un système de supervision basé sur plusieurs outil
 - Un exporter linux pour récupérer des données sur un environnement linux
 - Un exporter kubernetes pour récupérer des métriques du cluster lui-même
 
+## From scratch (kube manifest)
+
+[TP Monter une stack de supervision from scratch](supervision/1.supervision_manifest.md)
+
 
 - 
 
